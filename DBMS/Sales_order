@@ -1,0 +1,11 @@
+CREATE TABLE sales_order
+(s_order_no varchar(6) PRIMARY KEY CHECK(s_order_no LIKE 'O%'),
+ s_order_date date,
+ client_no varchar(6)  REFERENCES client_master(client_no),
+ delay_Addr varchar(25),
+ salesman_no varchar(6) REFERENCES sale_master(salesman_no),
+ delay_type char(1) DEFAULT 'F' CHECK(DELIVERY_TYPE IN('F','P')),
+ billed_yn char(1),
+ delay_date date,
+ order_status varchar(10) CHECK(ORDER_STATUS  IN('IN PROCESS','FULLFILLED','BACKORDER','CANCLED'))
+ );

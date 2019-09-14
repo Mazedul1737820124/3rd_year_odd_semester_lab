@@ -1,0 +1,9 @@
+SELECT product_master.description,product_master.cost_price FROM product_master WHERE product_master.product_no IN(
+
+ SELECT sales_order_details.product_no FROM sales_order_details WHERE sales_order_details.product_rate > 500
+);
+
+SELECT client_master.name,client_master.city FROM client_master WHERE client_master.client_no in (
+
+    SELECT sales_order.client_no FROM sales_order WHERE sales_order.order_status = 'IP'
+)

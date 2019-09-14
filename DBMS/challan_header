@@ -1,0 +1,7 @@
+create table challan_header(
+    challan_no varchar(6) primary key check(challan_no like 'CH'),
+	s_order_s varchar(6) references sales_order(s_order_s),
+	challan_date varchar(20) NOT NULL,
+	billed_yn char(1) DEFAULT 'N' check(billed_yn in('Y','N') )
+
+);

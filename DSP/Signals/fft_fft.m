@@ -1,0 +1,12 @@
+clc
+n=0:3;
+x_n=[1,1,2,3];
+N=4;
+X_K=fft(x_n,N);
+k=0:3;
+disp('x(k)=');
+disp(X_K)
+subplot(2,1,1);
+stem(k,X_K);
+subplot(2,1,2);
+stem(k,angle(X_K));

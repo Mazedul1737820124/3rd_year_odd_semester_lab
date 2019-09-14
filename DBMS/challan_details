@@ -1,0 +1,6 @@
+create table challan_details(
+    challan_no varchar(6) references challan_header(challan_no),
+	product_no varchar(6) references product_master(product_no),
+	qty_disp decimal(4,2) NOT NULL
+
+);

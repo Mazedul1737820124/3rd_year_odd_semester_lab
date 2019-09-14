@@ -1,0 +1,14 @@
+create table salesman_master (
+    salesman_no varchar(6) primary key check(salesman_no like 'S%'),
+	salesman_name varchar(20) NOT NULL,
+	Address1 varchar(30) NOT NULL,
+	Address2 varchar(30),
+	city varchar(20),
+	pincode varchar(6),
+	state varchar(20),
+	sal_amt decimal(8,2) NOT NULL check(sal_amt = 0),
+	tgt_to_get decimal(6,2)  NOT NULL check(sal_amt = 0),
+	ytd_sales decimal(6,2)  NOT NULL,
+	remarks varchar(60)
+	
+);

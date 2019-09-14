@@ -1,0 +1,12 @@
+CREATE TABLE Product_master(
+
+    product_no varchar(6) PRIMARY KEY CHECK(product_no LIKE 'P%'),
+	decription varchar(5) NOT NULL,
+	profit_percent decimal(3,2) NOT NULL,
+	unit_measure varchar(10)NOT NULL,
+	qty_no_hand decimal(8) NOT NULL,
+	record_lvl decimal(8) NOT NULL,
+	sell_price decimal(8,2),
+	cost_price decimal(8,2)
+	
+);

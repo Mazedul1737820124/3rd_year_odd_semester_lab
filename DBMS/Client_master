@@ -1,0 +1,11 @@
+CREATE TABLE Client_master(
+
+    client_no varchar(6) PRIMARY KEY CHECK(client_no LIKE 'C%'),
+	name varchar(20) NOT NULL,
+	address1 varchar(30),
+	address2 varchar(30),
+	city varchar(15),
+	state varchar(15),
+	pincode decimal(6),
+	bal_due float(10,2)
+);
